@@ -17,3 +17,8 @@ let read_lines file =
     | e ->
         close_in_noerr ic;
         raise e
+
+let rec print_lines lines =
+    match lines with
+    | [] -> ()
+    | line :: rest -> print_endline line; print_lines rest
