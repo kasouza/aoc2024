@@ -5,13 +5,9 @@ let parse_line line =
     |> List.map (int_of_string)
     |> fun list -> (List.nth list 0), (List.nth list 1)
 
-let calculate_distance location_pair =
-    match location_pair with
-    (left, right) -> abs (left - right)
+let calculate_distance (left, right) = abs (left - right)
 
-let sort_lists lists =
-    match lists with
-    (left_list, right_list) -> ((List.sort compare left_list), (List.sort compare right_list)) 
+let sort_lists (left_list, right_list) = ((List.sort compare left_list), (List.sort compare right_list)) 
 
 let combine_lists lists =
     match lists with
