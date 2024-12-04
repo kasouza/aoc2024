@@ -31,11 +31,7 @@ let rec parse doing tokens =
     match tokens with
     | Do :: Open_parem :: Close_parem :: rest -> parse true rest
     | Dont :: Open_parem :: Close_parem :: rest -> parse false rest
-    | Mul :: Open_parem :: Num (a) :: Comma :: Num(b) :: Close_parem :: rest ->
-            if (a < 1000) && (b < 1000) && doing then
-                (a * b) + parse doing rest
-            else
-                parse doing rest
+    | Mul :: Open_parem :: Num (a) :: Comma :: Num(b) :: Close_parem :: rest when doing -> (a * b) + parse doing rest
     | _ :: rest -> parse doing rest
     | [] -> 0
 
