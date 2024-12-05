@@ -1,3 +1,7 @@
+(*
+TODO: The `check_direction` should also check the first character 
+instead of we checking it manually beforing calling the function
+*)
 (* Directions and sequences setup *)
 let directions = [
     (-1, -1); (0, -1); (1, -1);
