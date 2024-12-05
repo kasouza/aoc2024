@@ -37,3 +37,16 @@ let rec print_lines lines =
 let is_digit = function '0' .. '9' -> true | _ -> false
 
 let substr_after str n = String.sub str n ((String.length str) - n)
+
+let array_of_string s = Array.init (String.length s) (String.get s)
+
+let print_mat mat =
+    let rows_len = Array.length mat in
+    let cols_len = Array.length mat.(0) in
+    for row = 0 to rows_len - 1 do
+        for col = 0 to cols_len - 1 do
+            Printf.printf "%c " mat.(row).(col)
+        done;
+        print_endline ""
+    done
+
