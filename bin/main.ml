@@ -1,6 +1,6 @@
 let () = 
     print_endline "-- Day 01:";
-    Aoc2024.Day_one.run();
+    Aoc2024.Day01.run();
     print_endline "\n-- Day 02:";
     Aoc2024.Day02.run();
     print_endline "\n-- Day 03:";
