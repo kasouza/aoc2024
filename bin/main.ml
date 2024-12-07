@@ -7,4 +7,6 @@ let () =
     Aoc2024.Day03.run();
     print_endline "\n-- Day 04:";
     Aoc2024.Day04.run();
+    print_endline "\n-- Day 06:";
+    Aoc2024.Day06.run();
 

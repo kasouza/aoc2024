@@ -50,3 +50,7 @@ let print_mat mat =
         print_endline ""
     done
 
+let read_matrix filename =
+    read_lines filename
+    |> List.map array_of_string
+    |> Array.of_list

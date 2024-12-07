@@ -17,11 +17,6 @@ let mas_sequence = [ 'A'; 'S' ]
 let sam_sequence = [ 'A'; 'M' ]
 
 (* Common functions *)
-let read_matrix filename =
-    Utils.read_lines filename
-    |> List.map Utils.array_of_string
-    |> Array.of_list
-
 let is_within_bounds mat (row, col) =
     let rows = Array.length mat in
     let cols = if rows > 0 then Array.length mat.(0) else 0 in
@@ -81,13 +76,13 @@ let part2 mat =
     !sum
 
 let run () = 
-    read_matrix "assets/inputs/day04/input_short.txt"
+    Utils.read_matrix "assets/inputs/day04/input_short.txt"
     |> part1
     |> print_int;
 
     print_endline "";
 
-    read_matrix "assets/inputs/day04/input.txt"
+    Utils.read_matrix "assets/inputs/day04/input.txt"
     |> part2
     |> print_int;
 
